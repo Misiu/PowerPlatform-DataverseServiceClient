@@ -2282,21 +2282,23 @@ namespace Microsoft.PowerPlatform.Dataverse.Client
         }
 
         /// <summary>
-        /// Create an entity and process any related entities
+        /// Create an entity, process any related entities and return created entity
         /// </summary>
         /// <param name="entity">entity to create</param>
+        /// <param name="columnSet">Column Set collection to return with the request</param>
         /// <param name="cancellationToken">Propagates notification that operations should be canceled.</param>
         /// <returns>Returns the newly created record</returns>
-        public Task<Entity> CreateAndReturnAsync(Entity entity, CancellationToken cancellationToken)
+        public Task<Entity> CreateAndReturnAsync(Entity entity, ColumnSet columnSet, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
         }
         /// <summary>
-        /// Create an entity and process any related entities
+        /// Create an entity, process any related entities and return created entity
         /// </summary>
         /// <param name="entity">entity to create</param>
+        /// <param name="columnSet">Column Set collection to return with the request</param>
         /// <returns>Returns the newly created record</returns>
-        public Task<Entity> CreateAndReturnAsync(Entity entity)
+        public Task<Entity> CreateAndReturnAsync(Entity entity, ColumnSet columnSet)
         {
             throw new NotImplementedException();
         }
@@ -2418,6 +2420,27 @@ namespace Microsoft.PowerPlatform.Dataverse.Client
 
             if (resp == null)
                 throw LastException;
+        }
+        
+        /// <summary>
+        /// Updates an entity, process any related entities and return updated entity
+        /// </summary>
+        /// <param name="entity">entity to update</param>
+        /// <param name="columnSet">Column Set collection to return with the request</param>
+        /// <param name="cancellationToken">Propagates notification that operations should be canceled.</param>
+        public async Task UpdateAndReturnAsync(Entity entity, ColumnSet columnSet, CancellationToken cancellationToken)
+        {
+            throw new NotImplementedException();
+        }
+        
+        /// <summary>
+        /// Updates an entity, process any related entities and return updated entity
+        /// </summary>
+        /// <param name="entity">entity to update</param>
+        /// <param name="columnSet">Column Set collection to return with the request</param>
+        public async Task UpdateAndReturnAsync(Entity entity, ColumnSet columnSet)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
