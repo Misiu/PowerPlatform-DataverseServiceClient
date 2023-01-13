@@ -34,12 +34,13 @@ namespace Microsoft.PowerPlatform.Dataverse.Client
         [OperationContract]
         Task<Guid> CreateAsync(Entity entity, CancellationToken cancellationToken);
         /// <summary>
-        /// Create an entity and process any related entities
+        /// Create an entity, process any related entities and return created entity
         /// </summary>
         /// <param name="entity">entity to create</param>
+        /// <param name="columnSet">Column Set collection to return with the request</param>
         /// <param name="cancellationToken">Propagates notification that operations should be canceled.</param>
         /// <returns>Returns the newly created record</returns>
-        Task<Entity> CreateAndReturnAsync(Entity entity, CancellationToken cancellationToken);
+        Task<Entity> CreateAndReturnAsync(Entity entity, ColumnSet columnSet, CancellationToken cancellationToken);
         /// <summary>
         /// Delete instance of an entity
         /// </summary>
@@ -91,6 +92,13 @@ namespace Microsoft.PowerPlatform.Dataverse.Client
         /// <param name="cancellationToken">Propagates notification that operations should be canceled.</param>
         [OperationContract]
         Task UpdateAsync(Entity entity, CancellationToken cancellationToken);
+        /// <summary>
+        /// Updates an entity, process any related entities and return updated entity
+        /// </summary>
+        /// <param name="entity">entity to update</param>
+        /// <param name="columnSet">Column Set collection to return with the request</param>
+        /// <param name="cancellationToken">Propagates notification that operations should be canceled.</param>
+        [OperationContract]
+        Task UpdateAndReturnAsync(Entity entity, ColumnSet columnSet, CancellationToken cancellationToken);
     }
-
 }
