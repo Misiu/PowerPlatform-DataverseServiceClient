@@ -98,7 +98,8 @@ namespace Microsoft.PowerPlatform.Dataverse.Client
         /// <param name="entity">entity to update</param>
         /// <param name="columnSet">Column Set collection to return with the request</param>
         /// <param name="cancellationToken">Propagates notification that operations should be canceled.</param>
+        /// <returns>Returns the updated record</returns>
         [OperationContract]
-        Task UpdateAndReturnAsync(Entity entity, ColumnSet columnSet, CancellationToken cancellationToken);
+        Task<Entity> UpdateAndReturnAsync(Entity entity, ColumnSet columnSet, CancellationToken cancellationToken);
     }
 }
