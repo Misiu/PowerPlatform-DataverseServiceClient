@@ -2428,7 +2428,8 @@ namespace Microsoft.PowerPlatform.Dataverse.Client
         /// <param name="entity">entity to update</param>
         /// <param name="columnSet">Column Set collection to return with the request</param>
         /// <param name="cancellationToken">Propagates notification that operations should be canceled.</param>
-        public async Task UpdateAndReturnAsync(Entity entity, ColumnSet columnSet, CancellationToken cancellationToken)
+        /// <returns>Returns the updated record</returns>
+        public async Task<Entity> UpdateAndReturnAsync(Entity entity, ColumnSet columnSet, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
         }
@@ -2438,7 +2439,8 @@ namespace Microsoft.PowerPlatform.Dataverse.Client
         /// </summary>
         /// <param name="entity">entity to update</param>
         /// <param name="columnSet">Column Set collection to return with the request</param>
-        public async Task UpdateAndReturnAsync(Entity entity, ColumnSet columnSet)
+        /// <returns>Returns the updated record</returns>
+        public async Task<Entity> UpdateAndReturnAsync(Entity entity, ColumnSet columnSet)
         {
             throw new NotImplementedException();
         }
